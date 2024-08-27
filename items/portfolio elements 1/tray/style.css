@@ -1,0 +1,64 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+/* Custom styles go below */
+.cntnr{
+    height: 100%;
+    width: 100%;
+    background-color: #e2ecf6;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+#first, #second, #third, #fourth{
+    height: 350px;
+    width: 300px;
+    /* border: 2px solid blueviolet; */
+    /* position: absolute; */
+}
+
+#second, #fourth{
+    margin-top: 15%;
+}
+
+.card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.material-symbols-outlined{
+font-size: 100px;
+    color: #000000;
+    font-size: 150px;
+    position: absolute;
+    left: 20%;
+    top: 10%;
+}
+@media (max-width: 800px){
+    html,body{
+        height: auto;
+    }
+
+    .cntnr{
+    /* padding: 12% 0%; */
+    height: auto;
+    }
+
+    #second, #fourth{
+        margin-top: 0%;
+    }
+}

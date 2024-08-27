@@ -1,0 +1,36 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+/* Custom styles go below */
+main{
+    height: 100%;
+    width: 100%;
+    background-color:#fafafa;
+    display: grid;
+    grid-template-columns:repeat(10, .5fr);
+    grid-template-rows:repeat(10, 1fr);
+    gap: 1px;
+}
+
+span{
+    display: grid;
+    grid-template-columns:repeat(10, .5fr);
+    grid-template-rows:repeat(10, 1fr);
+    gap: 1px;
+    background-color: black;
+    transition-delay: 0s;
+    transition: all 2.2s;
+    transition-behavior: linear;
+}
+
+span:hover{
+    background-color: yellowgreen;
+}

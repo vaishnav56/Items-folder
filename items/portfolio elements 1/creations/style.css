@@ -1,0 +1,57 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+/* Custom styles go below */
+.cntnr{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.creations{
+    height: 100px;
+    width: 100%;
+    border-top: 2px solid #c8ccd4;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.creations img{
+    height: 90px;
+    width: 150px;
+    border-radius: 10px;
+    display: none;
+
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-20deg);
+    }
+}
+@keyframes rotate2 {
+    0% {
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+

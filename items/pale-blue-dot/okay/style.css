@@ -1,0 +1,86 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+/* Custom styles go below */
+.main{
+    height: 100%;
+    width: 100%;
+    background: url("https://4kwallpapers.com/images/wallpapers/stars-galaxy-1920x1080-10307.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    animation: space 800s linear infinite ;
+}
+
+.earth{
+    height: 100px;
+    width: 100px;
+    background-image: url(https://pbs.twimg.com/media/DON8Y_eUMAAV4pi.jpg);
+    border-radius: 50%;
+    background-size: 220px;
+    animation: rotate 12s linear infinite;
+}
+
+.text{
+    width: 48%;
+    border-radius: 20px;
+    /* height: 60%; */
+    background-color: rgba(2, 15, 44, 0.782);
+    padding: 50px 50px;
+    position: relative;
+}
+
+.text p{
+    color: aliceblue;
+}
+
+.arrow{
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-right: 30px solid rgba(2, 15, 44, 0.782);
+    border-bottom: 15px solid transparent;
+    position: absolute;
+    top: 50%;
+    left: -6%;
+    transform: translateY(-50%);
+  }
+
+
+@keyframes space{
+    from{
+        background-position: 0px, 0px;
+    }
+    to{
+        background-position: -20000px 20000px;
+    }
+}
+
+
+@keyframes rotate {
+    from{
+        background-position:0px;
+    }
+    to{
+        background-position: 220px, 220px;
+    }
+}
+
+@media (max-width:800px){
+    .main{
+        flex-direction: column;
+    }
+
+    .text{
+        height: auto;
+        width: auto;
+    }
+}

@@ -1,0 +1,391 @@
+/* Reset CSS */
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Custom styles go below */
+.main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    perspective: 1200px;
+    background-color: #e2f0fb;
+
+}
+
+.card-holder {
+    height: 600px;
+    width: 500px;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: .7s fromleft linear;
+    transition: transform 8s ease-in-out;
+}
+
+.container {
+    height: 500px;
+    width: 400px;
+    background: url("https://images.unsplash.com/photo-1582015752624-e8b1c75e3711?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    transition: transform .1s ease-in-out;
+    z-index: +5;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    /* position: absolute; */
+}
+
+/* .overlay {
+
+    /* pointer-events: none; */
+} */
+
+.crcl {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #e2f0fb;
+    z-index: +100;
+    bottom: -8%;
+    left: -8%;
+    display: flex;
+    align-items: center;
+    border: 4px solid #2e2e37;
+    justify-content: center;
+}
+
+.in-crcl {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    animation: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* background-color: #000; */
+}
+
+.in-crcl h5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    /* Adjust rotation angle as needed */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #2e2e37;
+    padding: 0 14px;
+    background-color: #2e2e37;
+    border-radius: 6px;
+
+}
+
+.in-crcl h5 a {
+    text-decoration: none;
+    color: #e2f0fb;
+}
+
+.in-crcl h5 a:hover {
+    color: rgb(88, 88, 238);
+}
+
+.dwn {
+    height: 150px;
+    width: 150px;
+    border: 3px solid rgb(101, 190, 101);
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    z-index: -100;
+}
+
+.top {
+    height: 70px;
+    width: 70px;
+    background-color: rgb(101, 190, 101);
+    position: absolute;
+    z-index: +100;
+    top: 10%;
+    transform: translateX(-40%)
+}
+
+.btm {
+    height: 50px;
+    width: 30px;
+    background-color: rgb(101, 190, 101);
+    position: absolute;
+    z-index: +100;
+    right: 30%;
+    bottom: -2%;
+}
+
+.trngl {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-right: 40px solid #e2f0fb;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    z-index: +100;
+}
+
+.content {
+    width: 50%;
+    height: 500px;
+    animation: .7s fromright linear;
+    transition: transform .1s ease-in-out;
+    background-color: #e2f0fb;
+}
+
+.content h4 {
+    color: rgb(101, 190, 101);
+    margin-top: 2%;
+    font-size: larger;
+    letter-spacing: 5px;
+}
+
+.content h1 {
+    font-size: 55px;
+    color: #2e2e37;
+    white-space: wrap;
+    margin-top: 3%;
+}
+
+.content .up {
+    font-size: 18px;
+    color: #6c5f5c;
+    margin-top: 3%;
+    letter-spacing: 1px;
+
+}
+
+.content .down {
+    font-size: 18px;
+    color: #6c5f5c;
+    letter-spacing: 1px;
+    margin-top: 3%;
+}
+
+.data {
+    
+    height: 30%;
+    /* background-color: aqua; */
+    padding: 2% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    animation:visible 1.2s linear ;
+}
+
+.one {
+    height: 96%;
+    width: 40%;
+    /* background-color: bisque; */
+    color: #2e2e37;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.two {
+    height: 96%;
+    width: 40%;
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.three {
+    height: 96%;
+    color: #2e2e37;
+    width: 40%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.four {
+    height: 96%;
+    width: 40%;
+    /* background-color: greenyellow; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.content hr {
+    height: 2px;
+    margin-top: 3%;
+    background-color: #2e2e37;
+}
+
+.d-one {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.d-two {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content h5 {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: italic;
+    color: rgb(101, 190, 101);
+    font-size: xx-large;
+    margin-top: 2%;
+    transform: rotateX(-20deg);
+}
+
+@media (max-width: 800px) {
+    .main {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .top {
+        left: 2px;
+
+    }
+
+    .container {
+        height: 400px;
+        width: 275px;
+        background-position: center;
+    }
+
+    .crcl {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        border-radius: 50%;
+        background-color: #e2f0fb;
+        z-index: +100;
+        bottom: 2%;
+        left: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 4px solid #2e2e37;
+    }
+
+    .in-crcl {
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        animation: rotate;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        /* background-color: #000; */
+    }
+
+
+    .content {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .data {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .d-one {
+        width: 100%;
+    }
+
+    .d-two {
+        width: 100%;
+    }
+
+    .content h4 {
+        font-size: small;
+    }
+
+
+}
+
+
+
+
+/* Animations -----> */
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fromleft {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fromright {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes visible{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

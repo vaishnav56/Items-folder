@@ -1,0 +1,102 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Custom styles */
+.navbar {
+    background-color: #333;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    /* position: fixed; */
+}
+
+.links {
+    list-style: none;
+    display: flex;
+}
+
+.links li {
+    margin-right: 20px;
+}
+
+.links li:last-child {
+    margin-right: 0;
+}
+
+.links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.toggle-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.icon {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    position: relative;
+}
+
+.icon::before, .icon::after {
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+.icon::after {
+    top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: flex-end;
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 55px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    .links.active {
+        display: flex;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    #toggle {
+        display: none;
+    }
+
+    .icon {
+        margin-top: 10px;
+    }
+
+    .icon::before, .icon::after {
+        width: 25px;
+    }
+}

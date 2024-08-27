@@ -1,0 +1,48 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+/* Custom styles go below */
+section{
+    height: auto;
+    width: 50%;
+    background-color: #25262f;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.counter{
+    height: 200px;
+    width: 400px;
+    background-color: #25262f;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: aliceblue;
+    border-radius: 25px;
+    border: 2px solid #474851;
+}
+
+.counter h1{
+    color: #80db66;
+    font-size: 65px;
+}
+.counter p{
+    font-size: 25px;
+    /* word-wrap: wrap; */
+}

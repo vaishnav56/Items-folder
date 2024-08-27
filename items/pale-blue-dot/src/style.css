@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+body {
+  background: url("https://4kwallpapers.com/images/wallpapers/stars-galaxy-1920x1080-10307.jpg"), url("https://images5.alphacoders.com/465/465322.jpg"); 
+ background-blend-mode: multiply;
+ animation: spacetravel 800s linear infinite; 
+} 
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#earth {
+  width: 80px;
+  height: 80px;
+  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
+    inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
+  background-image: url('https://pbs.twimg.com/media/DON8Y_eUMAAV4pi.jpg');
+  background-size: 190px;
+  margin: 0 50px 0 0px;
+  border-radius: 50%;
+  position: relative;
+  animation-name: rotate;
+  animation-duration: 12s, 12s, 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.earth-info {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 10px solid #22273B;
+}
+
+.quote {
+  background-color: #22273B;
+  border-radius: 10px;
+  font-size: .8rem;
+  line-height: 25px;
+  letter-spacing: 0.02em;
+  padding: 14px 0;
+  margin-block: 120px;
+  color: #f2f2f2;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  max-width: 100%;
+  width: 500px;
+  opacity: .8;
+  box-shadow: 0 0 20px rgba(242, 242, 242, 0.2);
+}
+
+em{
+  font-size: 0.8rem;
+}
+
+@keyframes rotate {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 190px;
+  }
+}
+
+@keyframes spacetravel {
+    from {
+      background-position:0 0;
+  }
+    to {
+      background-position:-20000px 20000px;
+  }
+}
+
+@media (max-width: 700px) {
+  #earth {
+    margin: 60px auto;
+  }
+  .container {
+    flex-direction: column;
+    justify-content: unset;
+  }
+  .arrow {
+    display: none;
+  }
+  .quote {
+    width: auto;
+    margin: 20px;
+  }
+}
+
+
